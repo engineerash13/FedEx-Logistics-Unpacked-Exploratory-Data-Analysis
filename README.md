@@ -1,113 +1,96 @@
 # FedEx Logistics Unpacked: Exploratory Data Analysis
 
-## Project Overview
-This project performs an Exploratory Data Analysis (EDA) on FedEx logistics and shipment data to identify delivery patterns, operational inefficiencies, vendor performance issues, and shipment trends. The analysis helps uncover actionable insights for improving logistics performance and supply chain efficiency.
+An individual EDA project analyzing FedEx supply chain performance using Python and Plotly. The project examines delivery patterns, shipment mode efficiency, vendor performance, and INCO term impact across global logistics data.
+
+**Author:** Ashwin Suryawanshi
 
 ---
 
 ## Tools & Technologies
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+
+- Python (Pandas, NumPy)
+- Plotly (interactive visualizations)
+- Matplotlib, Seaborn
 - Jupyter Notebook
 
 ---
 
+## Files in This Repository
+
+| File | Description |
+|------|-------------|
+| `EDA ON FedEx Dataset.ipynb` | Full EDA notebook — data cleaning, univariate, bivariate, and multivariate analysis with 20+ charts |
+
+---
+
+## Dataset
+
+**Source dataset:** `SCMS_Delivery_History_Dataset.csv`
+
+The dataset contains FedEx shipment-level records including:
+
+| Column | Description |
+|--------|-------------|
+| Shipment Mode | Air, Sea, Road, etc. |
+| Country | Destination country |
+| Managed By | Management team (e.g., PMO - US) |
+| INCO Terms | International commercial terms |
+| Scheduled Delivery Date | Planned delivery date |
+| Delivered to Client Date | Actual delivery date |
+| Shipment Weight | Weight in kg |
+| Insurance | Insurance cost |
+| Item Description | Product type |
+
+---
+
 ## Project Objectives
-- Analyze shipment and delivery operations
-- Identify delivery delays and bottlenecks
-- Evaluate vendor performance
-- Understand shipment mode efficiency
-- Discover logistics trends and patterns
-- Generate data-driven business insights
+
+- Determine whether shipment mode influences on-time delivery rate
+- Identify if management teams (e.g., PMO - US) differ in delivery effectiveness
+- Analyze the correlation between shipment weight and insurance costs
+- Understand country-specific delivery performance
+- Examine the impact of INCO terms on vendor reliability
 
 ---
 
-## Dataset Information
-The dataset contains logistics and shipment-related information including:
-- Shipment modes
-- Delivery status
-- Vendor details
-- Country-wise deliveries
-- Delivery delays
-- Shipment weights
-- Insurance costs
-- Scheduled vs actual delivery dates
+## Analysis Structure (UBM Framework)
 
----
+### Univariate Analysis
+- Distribution of shipment modes
+- Delivery status breakdown (on-time vs delayed)
+- Country-wise shipment volume
 
-## Exploratory Data Analysis Performed
+### Bivariate Analysis
+- Shipment mode vs on-time delivery rate
+- Management team vs delivery performance
+- INCO terms vs vendor reliability
+- Shipment weight vs insurance cost (correlation)
 
-### Data Cleaning & Wrangling
-- Duplicate value checks
-- Missing value handling
-- Data formatting
-- Feature understanding
-
-### Logistics Performance Analysis
-- Top countries by deliveries
-- Shipment mode distribution
-- Delivery delay analysis
-- Monthly delivery trends
-
-### Vendor & Shipment Insights
-- Vendor performance comparison
-- On-time delivery analysis
-- Delay distribution by shipment mode
-- Delivery performance by INCO terms
-
-### Operational Trend Analysis
-- Shipment weight vs insurance cost
-- Scheduled vs actual delivery comparison
-- Delivery time distribution analysis
-
----
-
-## Visualizations Included
-- Bar Charts
-- Pie Charts
-- Histograms
-- Box Plots
-- Scatter Plots
-- Line Charts
+### Multivariate Analysis
+- Combined effect of country + mode + INCO terms on delivery
+- Heatmaps of delivery performance across segments
 
 ---
 
 ## Key Insights
-- Certain shipment modes experienced higher delivery delays.
-- Vendor performance varied significantly across regions.
-- Some countries showed consistently high delivery volumes.
-- Delivery delays impacted operational efficiency and customer satisfaction.
-- Shipment weight influenced insurance costs and logistics expenses.
+
+- **South Africa Field Office** achieved the highest on-time delivery rate at **98.25%**
+- **PMO - US** lagged significantly at **55.67%** on-time delivery
+- **Air shipments** outperformed Sea and Road in on-time rates
+- **Positive correlation** observed between shipment weight and insurance costs
+- Significant variation in performance based on country and INCO terms
 
 ---
 
 ## Business Recommendations
-- Optimize shipment modes with frequent delays
-- Improve vendor monitoring and evaluation
-- Enhance delivery scheduling systems
-- Reduce operational bottlenecks
-- Implement data-driven logistics planning
+
+- Audit and restructure PMO - US operations — the 55.67% on-time rate is a major operational risk
+- Shift high-priority shipments to Air mode where cost-effective
+- Renegotiate INCO terms with consistently underperforming vendors
+- Implement predictive delivery scoring using shipment weight and mode
 
 ---
 
-## Project Workflow
-1. Data Collection  
-2. Data Understanding  
-3. Data Cleaning  
-4. Data Wrangling  
-5. Exploratory Data Analysis  
-6. Visualization & Storytelling  
-7. Business Insights & Recommendations  
+## Topics
 
----
-
-## Repository Structure
-
-```text
-data/        -> dataset files
-notebook/    -> Jupyter notebook
-images/      -> charts and visualizations
-report/      -> project reports
+`eda` `python` `pandas` `plotly` `logistics` `supply-chain` `data-analysis` `fedex`
